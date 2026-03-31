@@ -1,0 +1,67 @@
+name: "🔧 TMA"
+description: "Demande de maintenance corrective ou évolutive"
+labels: ["tma", "maintenance"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Demande de TMA
+        Merci de remplir ce formulaire pour toute demande de maintenance.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Type de maintenance"
+      options:
+        - Corrective (bug)
+        - Évolutive (amélioration)
+        - Préventive
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priorité"
+      options:
+        - "🟢 Basse"
+        - "🟡 Moyenne"
+        - "🟠 Haute"
+        - "🔴 Critique"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      placeholder: "Décrivez le problème ou l'amélioration souhaitée..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Étapes pour reproduire (si bug)"
+      placeholder: |
+        1. Aller sur...
+        2. Cliquer sur...
+        3. Observer que...
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Comportement attendu"
+      placeholder: "Que devrait-il se passer ?"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Captures d'écran"
+      placeholder: "Glissez-déposez vos captures ici"
+
+  - type: input
+    id: url
+    attributes:
+      label: "URL concernée"
+      placeholder: "https://..."
