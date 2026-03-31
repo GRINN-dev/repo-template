@@ -1,0 +1,71 @@
+name: "🚀 Epic"
+description: "Epic liée à un devis — regroupe un ensemble de fonctionnalités"
+labels: ["epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Nouvelle Epic
+        Une epic regroupe un ensemble de tickets liés à un devis client.
+        **Le fichier devis est obligatoire.**
+
+  - type: input
+    id: quote_number
+    attributes:
+      label: "Numéro de Devis"
+      placeholder: "Ex: DEV-2026-042"
+      description: "Le numéro du devis Qonto associé à cette epic. Il sera affiché comme badge sur la carte du projet."
+    validations:
+      required: true
+
+  - type: input
+    id: quote_amount
+    attributes:
+      label: "Montant du Devis"
+      placeholder: "Ex: 12 500 €"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description de l'Epic"
+      placeholder: "Décrivez l'objectif global de cette epic..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Périmètre / Fonctionnalités incluses"
+      placeholder: |
+        - [ ] Fonctionnalité 1
+        - [ ] Fonctionnalité 2
+        - [ ] Fonctionnalité 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: quote_file
+    attributes:
+      label: "Fichier Devis (obligatoire)"
+      description: "Glissez-déposez le PDF du devis ici. Ce champ est obligatoire."
+      placeholder: "Glissez-déposez le fichier PDF du devis ici"
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: "Références / Documents complémentaires"
+      placeholder: "Maquettes, specs, liens utiles..."
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priorité"
+      options:
+        - "🟢 Basse"
+        - "🟡 Moyenne"
+        - "🟠 Haute"
+        - "🔴 Critique"
+    validations:
+      required: true
