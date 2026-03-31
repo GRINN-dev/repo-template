@@ -1,0 +1,63 @@
+name: "🎫 Ticket"
+description: "Demande générale, nouvelle fonctionnalité ou tâche"
+labels: ["ticket"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Nouveau Ticket
+        Décrivez votre demande ci-dessous.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Catégorie"
+      options:
+        - Nouvelle fonctionnalité
+        - Amélioration
+        - Intégration
+        - Design
+        - Contenu
+        - Autre
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priorité"
+      options:
+        - "🟢 Basse"
+        - "🟡 Moyenne"
+        - "🟠 Haute"
+        - "🔴 Critique"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description de la demande"
+      placeholder: "Décrivez ce que vous souhaitez..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Critères d'acceptation"
+      placeholder: |
+        - [ ] Critère 1
+        - [ ] Critère 2
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Contexte / Références"
+      placeholder: "Liens, maquettes, documents de référence..."
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Captures d'écran / Maquettes"
+      placeholder: "Glissez-déposez vos fichiers ici"
