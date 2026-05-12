@@ -1,0 +1,91 @@
+name: "📋 Stand Alone"
+description: "Carte de travail — peut être rattachée à une Epic, autonome, ou offerte"
+labels: ["stand-alone"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Nouvelle carte Stand Alone
+        Une carte SA peut être :
+        - rattachée à une **Epic / Devis** (forfait)
+        - rattachée à une autre SA elle-même descendante d'une Epic
+        - **autonome** (à flagger manuellement comme « Offert » si non facturée)
+
+  - type: input
+    id: parent_epic
+    attributes:
+      label: "Carte parente (optionnel)"
+      placeholder: "Ex: #42"
+      description: "Numéro de l'issue parente (Epic ou SA descendante d'Epic). Laisse vide pour une SA autonome."
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Catégorie"
+      options:
+        - "🎨 Design"
+        - "✨ Feature"
+        - "🧪 Recette"
+        - "🛡 Garantie"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priorité"
+      options:
+        - "🟢 Basse"
+        - "🟡 Moyenne"
+        - "🟠 Haute"
+        - "🔴 Critique"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: "Niveau d'urgence"
+      description: "Obligatoire si catégorie = Garantie. Par défaut : Normal."
+      options:
+        - "🟢 Normal"
+        - "🟠 Urgent (<48h)"
+        - "🔴 Critique (<24h)"
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      placeholder: "Décrivez ce que vous souhaitez..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Critères d'acceptation"
+      placeholder: |
+        - [ ] Critère 1
+        - [ ] Critère 2
+
+  - type: textarea
+    id: motif
+    attributes:
+      label: "Motif (facultatif)"
+      description: "À préciser si la carte est autonome ou offerte (raison, contexte, négociation commerciale...)"
+      placeholder: "Ex: geste commercial, dépannage hors contrat, prise de contact..."
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Contexte / Références"
+      placeholder: "Liens, maquettes, documents de référence..."
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Captures d'écran / Maquettes"
+      placeholder: "Glissez-déposez vos fichiers ici"
