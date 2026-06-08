@@ -42,50 +42,9 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: urgency
-    attributes:
-      label: "Niveau d'urgence"
-      description: "Obligatoire si catégorie = Garantie. Par défaut : Normal."
-      options:
-        - "🟢 Normal"
-        - "🟠 Urgent (<48h)"
-        - "🔴 Critique (<24h)"
-      default: 0
-    validations:
-      required: true
-
   - type: textarea
     id: description
     attributes:
       label: "Description"
-      placeholder: "Décrivez ce que vous souhaitez..."
     validations:
       required: true
-
-  - type: textarea
-    id: acceptance
-    attributes:
-      label: "Critères d'acceptation"
-      placeholder: |
-        - [ ] Critère 1
-        - [ ] Critère 2
-
-  - type: textarea
-    id: motif
-    attributes:
-      label: "Motif (facultatif)"
-      description: "À préciser si la carte est autonome ou offerte (raison, contexte, négociation commerciale...)"
-      placeholder: "Ex: geste commercial, dépannage hors contrat, prise de contact..."
-
-  - type: textarea
-    id: context
-    attributes:
-      label: "Contexte / Références"
-      placeholder: "Liens, maquettes, documents de référence..."
-
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: "Captures d'écran / Maquettes"
-      placeholder: "Glissez-déposez vos fichiers ici"
