@@ -28,26 +28,8 @@ body:
     id: description
     attributes:
       label: "Description de l'Epic"
-      placeholder: "Décrivez l'objectif global de ce forfait..."
     validations:
       required: true
-
-  - type: textarea
-    id: scope
-    attributes:
-      label: "Périmètre / Fonctionnalités incluses"
-      placeholder: |
-        - [ ] Fonctionnalité 1
-        - [ ] Fonctionnalité 2
-        - [ ] Fonctionnalité 3
-    validations:
-      required: true
-
-  - type: textarea
-    id: references
-    attributes:
-      label: "Références / Documents complémentaires"
-      placeholder: "Maquettes, specs, liens utiles, PDF devis..."
 
   - type: dropdown
     id: priority
