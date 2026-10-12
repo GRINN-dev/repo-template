@@ -33,14 +33,14 @@ body:
       required: true
 
   - type: dropdown
-    id: urgency
+    id: niveau
     attributes:
-      label: "Niveau d'urgence"
-      description: "Obligatoire pour les Chrono TMA. Par défaut : Normal."
+      label: "Niveau de prise en charge"
+      description: "Standard : dans les meilleurs délais. Prioritaire : prise en charge sous 8 h ouvrées. Critique : sous 4 h ouvrées. Prioritaire et Critique majorent le temps décompté."
       options:
-        - "🟢 Normal"
-        - "🟠 Urgent (<48h)"
-        - "🔴 Critique (<24h)"
+        - "🟢 Standard"
+        - "🟠 Prioritaire (sous 8 h ouvrées)"
+        - "🔴 Critique (sous 4 h ouvrées)"
       default: 0
     validations:
       required: true
