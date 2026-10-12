@@ -38,7 +38,7 @@ body:
         - "🟢 Basse"
         - "🟡 Moyenne"
         - "🟠 Haute"
-        - "🔴 Critique"
+        - "🔴 Très haute"
     validations:
       required: true
 
